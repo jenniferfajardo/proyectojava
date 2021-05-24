@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+	margin: 0;
+	border:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+    --dark-color: #000000;
+    --white-color: #FFFFFF;
+    --purple-color: #752995;
+    --blue-color:#00B2B1;
+}
+
+
+body{
+	color: var(--dark-color);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+p{
+	text-align: justify;
+}
+
+.contenedor{
+	max-width: 100%;
+	width: 100%;
+}
+
+header{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+}
+.logo img{
+	max-width: 250px;
+	width: 100%;
+}
+.btn-azul, .btn-morado{
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.btn-azul {
+  color: var(--dark-color);	
+  background-color: var(--blue-color);
+  border:2px solid var(--blue-color); 
+}
+.btn-azul:hover {
+  color: var(--dark-color);	
+  background-color: var(--white-color);
+  border:2px solid var(--blue-color);
+  
+}
+.btn-morado {
+  color: var(--purple-color);	
+  background-color: var(--white-color);
+  border:2px solid var(--purple-color);
+ }
+.btn-morado:hover {
+  color: #FFFFFF;
+  background-color: #752995;
+  border-color: #752995;
+}
+
+
+nav{
+	background-color: var(--purple-color);
+}
+
+.menu{
+	list-style: none;
+}
+
+.item{
+	padding: 15px;
+	text-align: center;
+}
+
+.item:hover{
+	background-color: rgba(255, 255, 255, 0.55);
+}
+
+.item a{
+	color: var(--white-color);
+	text-decoration: none;
+	display: block;
+}
+
+#intro{
+	margin-top: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 2px 2px #000000;
+}
+
+.agenda{
+
+background-image: url('../img/fondo.jpg');
+padding: 30px;
+
+}
+
+.agenda h1{
+	font-weight:400;
+	font-size: 1.7rem;
+}
+
+.agenda p{
+	margin: 10px 0;
+}
+
+.promo{
+
+background-color: var(--purple-color);
+padding: 30px;
+text-align: center;
+}
+
+.promo h1{
+	color: var(--white-color);
+	text-shadow: 2px 2px 2px var(--dark-color);
+	font-size: 2rem;
+}
+
+.promo img{
+	border-radius: 100%;
+	border:7px solid var(--white-color);
+	width: 50%;
+}
+
+#servicios{
+	max-width: 100%;
+	width: 100%;
+	margin-top: 10px;
+}
+#servicios h1{
+	color: var(--purple-color);
+	text-shadow: 2px 2px 2px var(--dark-color);
+	font-size: 2.5rem;
+	text-align: center;
+}
+#servicios hr{
+	border:2px solid var(--blue-color);
+	width: 15%;
+	margin: 10px auto;
+}
+.cajas{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.servicio{
+margin: 20px;
+text-align: center;
+}
+
+.servicio img{
+	max-width: 200px;
+	width: 100%;
+}
+.servicio h5{
+	color: var(--purple-color);
+	font-size: 1.2em;
+	margin: 10px 0;
+}
+
+#info{
+	background-image: url("../img/fondo.jpg");	
+}
+
+.cajainfo{
+	background-color: rgba(117,41,149,0.7);
+	display: flex;
+	flex-direction: column;
+}
+
+.cajai{
+	text-align:center;
+	color: #FFFFFF;
+	padding: 20px;
+}
+
+.cajai i{
+	font-size: 3em;
+}
+.cajai h5{
+	margin: 10px 0;
+	font-size: 1.5em;	
+	font-weight: 400;
+}
+.cajai p{
+	text-align: center;
+}
+
+
+@media screen and (min-width:768px){
+	
+	header{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.menu{
+		display: flex;
+		flex-direction: row;
+	}
+
+	#intro{
+		display: flex;
+		flex-direction: row;	
+	}
+	.agenda , .promo{
+		width: 50%;
+	}
+	.promo img{
+		width: 70%;
+	}
+	.cajas{
+		flex-direction: row;
+	}
+
+	.cajas img{
+		width: 60%;	
+	}
+
+	.cajainfo{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+}
+
+
+
+@media screen and (min-width:1024px){
+
+	#intro{
+		display: flex;
+		flex-direction: row;
+	}
+
+	.agenda{
+		flex-basis: 70%;
+	}
+
+	.promo{
+		flex-basis: 30%;
+	}
+	.cajainfo{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
